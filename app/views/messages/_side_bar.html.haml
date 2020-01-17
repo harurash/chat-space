@@ -2,11 +2,11 @@
   .side_bar__header
     .items
       .items__name
-        masa
+        =current_user.name
       .items__icons
         =link_to "#",class:"contents__btn1" do
           =icon("fa","edit")
-        =link_to "#",class:"contents__btn1" do
+        =link_to "/users/(current_user)/edit",class:"contents__btn1" do
           =icon("fa","cog")
   .side_bar__groups
     .side_bar__groups__list
