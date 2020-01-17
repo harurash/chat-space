@@ -4,13 +4,17 @@
       .items__name
         =current_user.name
       .items__icons
-        =link_to "#",class:"contents__btn1" do
+        =link_to new_group_path,class:"contents__btn1" do
           =icon("fa","edit")
         =link_to "/users/(current_user)/edit",class:"contents__btn1" do
           =icon("fa","cog")
   .side_bar__groups
     .side_bar__groups__list
       .side_bar__groups__list__title
-        techcamp
+        - current_user.groups.each do |group|
+          .group
+            = link_to '#' do
+              .side_bar__groups__list__title
+                = group.name
       .side_bar__groups__list__message
         まだメッセージはありません
