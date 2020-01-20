@@ -3,28 +3,26 @@
     .chat-main__header__list
       .chat-main__header__list__box
         .chat-main__header__list__box__test
-          test
-        .chat-main__header__list__box__member
-          Menber:masa
-      .chat-main__header__list__btns
-        =link_to "#",class: "btn" do
-          Edit
+          = @group.name
+          .chat-main__header__list__box__member
+            member:
+            - @group.users.each do |user|
+              =user.name 
+        .chat-main__header__list__btns
+          =link_to edit_group_path(current_user),class: "btn" do
+            Edit
 
-  .chat-main__message
+  .chat-main__messages
     .chat-main__message__title
-      .chat-main__message__title__box
-        .chat-main__message__title__box__name
-          masa    
-        .chat-main__message__title__box__data
-          2019/11/20(wed) 17:43:01
-      .chat-main__message__title__message
-        おはよう
+      = render @messages
 
   .chat-main__form
-    .chat-main__form__formbox
-      %input.login-input-text{name:"text",placeholder:"type a message", type: "text",class:"text", value:""}/
-      %label{class: "input-box__image"}
-        = icon('fas', 'image')
-        %input{type: "file",class: "image"}
-
-    = link_to 'Send', "#", class: 'sendbtn'
+    .chat-main__form__box
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .chat-main__form__box__set
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        .send
+          = f.submit 'Send', class: 'form__submit'
