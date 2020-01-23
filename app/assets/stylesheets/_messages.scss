@@ -139,6 +139,7 @@
       .chat-main__messages{
         height:calc(100% - 190px);
         width:100%;
+        overflow: scroll;
         &__title{
           height: 90px;
           width:100%;
