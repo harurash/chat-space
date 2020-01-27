@@ -1,5 +1,6 @@
 .chat-main__message
-  .chat-main__message__title
+  .chat-main__message__title{data: {message: {id: message.id}}}
+
     .chat-main__message__title__box
       .chat-main__message__title__box__name
         = message.user.name

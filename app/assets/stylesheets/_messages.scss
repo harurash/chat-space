@@ -179,42 +179,50 @@
         background-color: #d2d2d2;
         height: 90px;
         width: calc(100vw - 300px);
+        box-sizing: border-box;
         display: flex;
         align-items: center;
         justify-content: center;
         &__box{
-          height: 80px;
-          width:600px;
+          height: 100%;
+          width:100%;
          }
         }
       }
     }
   
   .chat-main__form__box__set{
-    height: 60px;
-    width:20px;
+    height: 30px;
+    width:30px;
     display: flex;
     align-items: center;
     position: absolute;
-    right: 350px;
-    bottom: 5px;
+    right: 140px;
     }
    
-  .new_message
-  {
+    .form__mask__image{
+      font-size: 20px;
+    }
+
+
+
+    .hidden{
+      display: none;}
+
+.new_message{
+    background-color: #d2d2d2;
+    height: 100%;
+    width:100%;
     display: flex;
     align-items: center;
-    margin-top:10px;
+    justify-content: center;
+    position: relative;
   }
 
-
-  .hidden{
-    visibility: hidden;
-   
-  }
   .form__message{
     height: 60px;
-    width: 600px;  
+    width: calc(100% - 150px);  
+ 
             
   }
   .form__submit{
@@ -225,8 +233,9 @@
   }
   .send{
     background-color:#38aef0;
-    height: 40px;
+    height: 50px;
     width:60px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
