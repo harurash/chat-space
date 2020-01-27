@@ -25,12 +25,10 @@ $(function(){
       //メッセージが入ったHTMLに、入れ物ごと追加
       $('.chat-main__messages').append(insertHTML);
       $('.chat-main__messages').animate({ scrollTop: $('.chat-main__message')[0].scrollHeight});
-      $(".new_message")[0].reset();
-      $(".form__submit").prop("disabled", false);
       }
     })
     .fail(function() {
-      console.log('error');
+      alert("error");
     });
   };
     if (document.location.href.match(/\/groups\/\d+\/messages/)) {
