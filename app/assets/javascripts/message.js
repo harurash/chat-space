@@ -1,5 +1,4 @@
 $(function(){
-<<<<<<< HEAD
 
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -37,8 +36,7 @@ $(function(){
     }
 
 
-=======
->>>>>>> parent of 4e0f6cd... 自動更新機能の実装
+
   function buildHTML(message){
     if(message.image){
       var html =
