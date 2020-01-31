@@ -142,6 +142,7 @@
         width:100%;
         margin-left: 40px;
         overflow: scroll;
+        margin-top: 10px;
 
         .chat-main__messages__title{
           height: 100px;
@@ -232,6 +233,8 @@
     color: #fff;
     border: none;
     z-index: 100;
+    height: 50px;
+    width:60px;
   }
   .send{
     background-color:#38aef0;
